@@ -1,193 +1,400 @@
-*{
-  box-sizing : border-box;
-  /*outline: 1px solid rgba(255, 0, 0, 0.2);*/
+@import url('https://fonts.googleapis.com/css?family=Lora|Roboto');
+/*----------------------------------------------------*/
+                  /*DEFAULT CSS STYLES*/
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    color: #131511;
+    /*outline: 1px solid rgba(255, 0, 0, .2);*/
 }
-img{
-  display: block;
-  /*width: 100%;*/
+img
+{
+    display: block;
+    width: 100%;
+}
+
+body
+{
+  width: 1280px;
+    margin: 0 auto;
+    background-color: #f2f1e8;
+    font-family: 'Lora';
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 1.2;
+}
+/*----------------------------------------------------*/
+                  /*NAVIGATION*/
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    height: 50px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 0.9em;
+    box-shadow: 6px 6px 10px -8px;
+}
+.nav-image{
+  height: 40px;
+    width: 40px;
+    margin-top: 4px;
+    float: left;
+    background-image:
+}
+.nav-links
+{
+    margin: 0 auto;
+    margin-top: 7px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
 }
 a{
-  text-decoration: none;
-  color: #1E8BC3;
-}
-body{
-  background-color: #f2f1e8;
-  font-family: 'Lora';
-  margin: 0px auto;
-  font-size: 25px;
-  line-height: 1.5;
-}
-.topnav{
+  padding: 25px;
   color: #2B2F26;
-  background-color: #fff;
-  text-transform: uppercase;
-  font-family: 'Roboto';
-  text-align: center;
-  justify-content: space-between;
-  margin-left: 0px;
-  margin-right: 0px;
 }
-nav > a{
-  display: inline-block;
-  padding: 10px 30px;
+a:hover{
+  color: #967343;
+  text-decoration: underline;
+  background-color: transparent;
 }
-a:link {
-    color: #2b2f32;
-    background-color: transparent;
+a:active{
+  color: #968772;
 }
-a:visited {
-    color: #968772;
-    background-color: transparent;
+.nav-image {
+    height: 40px;
+    width: 40px;
+    margin-top: 4px;
+    float: left;
+    background-image: url('./images/optimized/bent-creek-logo.png');
+    background-size: contain;
 }
-a:hover {
-    color: #CD5D67;
-    background-color: transparent;
-    text-decoration: underline;
-}
-a:active {
-    color: #968772;
-    background-color: transparent;
-    text-decoration: underline;
-}
-.photo-grid-container {
+/*----------------------------------------------------*/
+                  /*INDEX - HOME PAGE*/
+.home-products
+{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  margin: 0px 30px;
 }
-.photo-grid {
-  display: flex;
-  justify-content:space-around;
-  flex-wrap: wrap;
+  .product
+  {
+    margin: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+  }
+  .product-01
+  {
+    flex: 1 1 60%;
+    order: 1;
+    height: 370px;
+    background-image: url('./images/optimized/product-1.jpg');
+  }
+  .product-02
+  {
+    flex: 1 1 15%;
+    order: 2;
+    height: 370px;
+    background-image: url('./images/optimized/product-2.jpg');
+  }
+  .product-03
+  {
+    flex: 1 1 15%;
+    order: 3;
+    height: 370px;
+    background-image: url('./images/optimized/product-3.jpg');
+  }
+  .product-04
+  {
+    flex: 1 1 20%;
+    order: 4;
+    height: 241px;
+    background-image: url('./images/optimized/product-4.jpg');
+  }
+  .product-05
+  {
+    flex: 1 1 15%;
+    order: 5;
+    height: 241px;
+    background-image: url('./images/optimized/product-5.jpg');
+  }
+  .product-06
+  {
+    flex: 1 1 35%;
+    order: 6;
+    height: 241px;
+    background-image: url('./images/optimized/product-6.jpg');
+  }
+  .product-07
+  {
+    flex: 1 1 20%;
+    order: 7;
+    height: 241px;
+    background-image: url('./images/optimized/product-7.jpg');
+  }
+    .description
+    {
+      margin-bottom: 27px;
+      padding: 10px;
+      background-color: #2B2F27;
+      color: #FFFFFF;
+      font-size: 1em;
+    }
+    /*----------------------------------------------------*/
+                      /*HEADERS*/
+header {
+    color: #131511;
+    /*height: 170px;*/
+    margin: 40px auto;
+    text-align: center;
+    padding-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
-.photo-grid-item {
-  border: 1px solid #fff;
-  height: 300px;
 
+header h1 {
+  font-size: 3.5em;
+  font-weight: normal;
 }
-div.description{
-  position: absolute;
-  bottom: 0px;
-  width: 30%;
-  font-family: 'Lora';
-  font-size: 18px;
-  color: white;
-  margin: 0px;
+
+header h3 {
+  font-size: 2em;
+  font-weight: lighter;
 }
-.description-content{
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: #2b2f26;
-  padding:5px;
-}
-main{
-  width: 100%;
+    /*----------------------------------------------------*/
+                      /*ABOUT PAGE*/
+main .about-page
+{
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+  font-size: 1.5em;
+  font-weight: lighter;
+  line-height: 2em;
+}
+div.text-block{
+  margin: 30px auto;
+  padding: 20px 75px;
+  line-height: 2em;
+  font-size: 1em;
+}
+div.text-block .history h4{
+  font-size: 25px;
+}
+div.facilities-block{
+  display: flex;
+  margin-right: auto;
+  margin-left:  75px;
+  margin-top: 30px;
+  padding: 20px;
+  line-height: 2em;
+  width: 95%;
+}
+div.facilities-block .facilities h4{
+  font-size: 25px;
+}
+div.about-aside {
+    width: 30%;
+    font-size: 18px;
+    font-style: italic;
+    margin: 40px 20px;
+}
+
+  .aside-photo {
+      background-size: cover;
+      height: 130px;
+      width: 150px;
+      float: right;
+      margin: 15px;
+      background-image: url('./images/optimized/background-1.jpg');
+  }
+
+.aside-caption{
+    padding-top: 140px;
+}
+div.plans-block{
+  /*margin: 30px auto;*/
+  margin-left: 75px;
+  margin-right: auto;
+  padding: 20px;
+  line-height: 2em;
+}
+
+.plans-block {
+  padding-top: 45px;
+}
+
+.plans-block table {
+  width: 76%;
+  border-collapse: collapse;
+}
+.plans-block .plans-table{
   background-color: #f2f1e8;
-  padding: 25px 20px;
+  border: 1px solid #968772;
 }
-main > .newsletter{
+.plans-block th {
+  background-color: #f2f1e8;
   text-align: center;
+  font-weight: 300;
+  border: 1px solid #968772;
 }
-.about-page{
-  margin: 0px 30px;
-  padding: 0px 50px;
+
+.plans-block td {
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  /*border-color: #968772;*/
 }
-.newsletter-background{
-  background-image: url("./images/optimized/background-2.jpg");
-  background-size:contain;
-  background-repeat: no-repeat;
-  background-position: top top;
-  margin:0px auto;
+
+.plans-block tr:nth-child(odd){
+  background-color: #f2eadc;
 }
-h1{
-  text-align: center;
-  color: #131511;
-  font-size: 50px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+#about-p-link {
+  padding: 5px;
+  color: #2B2F26;
 }
-h2{
-  text-align: center;
-  color: #1c1e1a;
-  font-size: 40px;
-  margin-bottom: 20px;
+div #birdhouse-img{
+  background-image: url('./images/optimized/birdhouse.jpg');
+  background-size: cover;
+  height: 90px;
+  width: 110px;
+  float: left;
+  margin: 15px;
 }
-h3{
-  font-size: 35px;
-  color: #131511;
+
+.blockquote
+{
+  margin-left: 18%;
+  padding: 10px;
+  font-size: 14px;
+  font-style: italic;
+  text-align: left;
+  border-left: 3px solid #ccc;
 }
-.blockquote{font-style: italic;
- font-size: 20px;
- text-align: left;
- border-left: 3px solid #ccc;
-}
-.thumbnail{
+.thumbnail {
+  float: left;
   width: 150px;
   height: 150px;
-  float: left;
   margin-right: 20px;
   margin-bottom: 20px;
 }
-.room-to-grow-img{
+#room-to-grow {
+  padding: 20px auto;
   background-image: url('./images/optimized/background-3.jpg');
-  background-size: cover;
   background-repeat: no-repeat;
-  padding:20px auto;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: right center;
+  /*width: 960px;*/
+  flex-basis: 1 100%;
+  height: 300px;
 }
-h1.room-to-grow{
+.room-to-grow h1
+{
+  font-family: 'Lora';
   padding: 140px;
   color: #fff;
-  font-family: 'Lora';
+  margin: 0px auto;
+  text-align: center;
 }
-.shelf-space{
-  background-image: url('./images/optimized/background-1.jpg');
-  height: 150px;
-  width: 200px;
-  float: right;
-  margin-top: 100px;
-  padding-left: 0px;
+   /*----------------------------------------------------*/
+                     /*NEWSLETTER PAGE*/
+.newsletter {
+ /*display: flex;*/
+ align-items: center;
+ justify-content: center;
+ background-image: url("../images/background-2.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
 }
 
-aside{
-  margin: 100px 20px;
-  padding-top: 75px;
-  font-size: 18px;
-  font-style: italic;
+.newsletter-background
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-image: url('./images/optimized/background-2.jpg');
+ background-size: cover;
+ background-repeat: no-repeat;
+ min-height: 100vh;
 }
-aside > p{
-  padding-top: 60px;
+
+form {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 30px;
+  background-color: #fff;
+  text-align: center;
 }
-.newsletter{
-  width: 50%;
-  margin: 150px 25%;
+
+legend {
+  display: inline-block;
+  width: 90%;
+  font-size: 1.5em;
+  padding: 10px;
 }
-.table{
-  border: 3px solid #000000;
-  border-collapse: collapse;
+
+fieldset p {
+  padding: 10px 0 30px 0;
 }
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-  border: 2px solid #2b2f26;
+
+.label-div {
+  margin: 0 auto;
+  text-align: left;
+  border-bottom: 2px solid #968772;
+  /*border: 2px solid #968772;*/
+  font-size: 0.9em;
 }
-.btn{
-  color: #F2F1E8;
-  background-color: #968772;
-  border-radius: 5px;
+
+label, #button {
+  font-family: 'Roboto', Arial, sans-serif;
 }
-.btn:hover{
+
+.container {
+  width: 80%;
+  height: 30px;
+}
+
+.container:focus {
   background-color: #967343;
-  color: #fff;
+  transition: background-color 0.8s ease-in;
 }
-.input-border{
-  border-bottom: #968772;
+
+#signupButton {
+  background-color: #968772;
+  padding: 10px 25px 10px 25px;
+  margin: 10px auto;
+  color: #F2F1E8;
 }
-.input-border:focus{
-  border-bottom: #967343;
+
+#signupButton:hover {
+  background-color: #967343;
+  color: #FFFFFF;
+  transition: background-color 0.5s ease-in;
 }
-#footer{
-  background-color: #2b2f26;
-  color: #fff;
-  padding: 20px;
+/*----------------------------------------------------*/
+                  /*FOOTER ELEMENTS*/
+footer {
+  background-color: #2B2F27;
+  margin: 10px auto;
+  padding: 20px 0px 20px 20px;
+  vertical-align: middle;
+}
+
+#footer p {
+  color: #FFFFFF;
   margin-top: 30px;
+  margin-left: 25px;
 }
